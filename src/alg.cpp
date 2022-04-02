@@ -53,7 +53,6 @@ for (int i = 0; i < inf.size(); i++) {
             stack1.push(inf[i]);
         }
     }
-}
 while (!stack1.isEmpty()) {
     post.push_back(stack1.get());
     post.push_back(' ');
