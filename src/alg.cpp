@@ -33,7 +33,8 @@ for (int i = 0; i < inf.size(); i++) {
     if (prior(inf[i]) == -1) {
         post.push_back(inf[i]);
         post.push_back(' ');
-    } else if (prior(inf[i]) == 0 || stack1.isEmpty()) {
+    } else {
+        if (prior(inf[i]) == 0 || stack1.isEmpty()) {
             stack1.push(inf[i]);
         } else if (prior(inf[i]) > prior(stack1.get())) {
             stack1.push(inf[i]);
@@ -53,6 +54,7 @@ for (int i = 0; i < inf.size(); i++) {
             stack1.push(inf[i]);
         }
     }
+}
 while (!stack1.isEmpty()) {
     post.push_back(stack1.get());
     post.push_back(' ');
