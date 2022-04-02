@@ -95,7 +95,7 @@ TStack <int, 100> stack2;
       stack2.pop();
       int a = stack2.get();
       stack2.pop();
-      stack2.push(calcul(pref[i], a, b));
+      stack2.push(calcul(pref[i], b, a));
     }
   }
   int znachenie = stack2.get();
