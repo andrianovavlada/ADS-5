@@ -34,19 +34,21 @@ for (int i = 0; i < inf.size(); i++) {
         post.push_back(inf[i]);
         post.push_back(' ');
     } else {
-        if (prior(inf[i]) == 0 || stack1.isEmpty()) {
-            stack1.push(inf[i]);
-        } else if (prior(inf[i]) > prior(stack1.get())) {
-            stack1.push(inf[i]);
-    } else if (prior(inf[i]) == 1) {
-            while (prior(stack1.get()) != 0) {
-                post.push_back(stack1.get());
-                post.push_back(' ');
-                stack1.pop();
-            }
+      if (prior(inf[i]) == 0) {
+        stack1.push(inf[i]);
+      } else if (stack1.isEmpty()) {
+        stack1.push(inf[i]);
+      } else if ((prior(inf[i]) > prior(stack1.get()))) {
+        stack1.push(inf[i]);
+      } else if (prior(inf[i]) == 1) {
+        while (prior(stack1.get()) != 0) {
+          post.push_back(stack1.get());
+          post.push_back(' ');
+          stack1.pop();
+        }
             stack1.pop();
         } else {
-            while (!stack1.isEmpty() && prior(inf[i]) <= prior(stack1.get())) {
+            while (!stack1.isEmpty() && (prior(inf[i]) <= prior(stack1.get()))) {
                 post.push_back(stack1.get());
                 post.push_back(' ');
                 stack1.pop();
