@@ -25,7 +25,7 @@ int prior(char ch) {
     if (ch == ' ') {
         return 4;
     } else {
-    return -1;
+    return 5;
     }
 }
 
@@ -93,7 +93,7 @@ int eval(std::string pref) {
   // добавьте код
 TStack <int, 100> stack2;
   for (int i = 0; i < pref.size(); i++) {
-    if (prior(pref[i]) == -1) {
+    if (prior(pref[i]) == 5) {
       stack2.push(pref[i] - '0');
     } else if (prior(pref[i]) <= 3) {
       int b = stack2.get();
