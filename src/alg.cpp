@@ -59,7 +59,10 @@ while (!stack1.isEmpty()) {
     post.push_back(' ');
     stack1.pop();
 }
-post.erase(post.end() - 1, post.end());
+for (int i = 0; i < post.size(); i++) {
+    if (post[post.size() - 1] == ' ')
+      post.erase(post.size() - 1);
+  }
   return post;
 }
 
