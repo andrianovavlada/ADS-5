@@ -21,6 +21,9 @@ int prior(char ch) {
     }
     if (ch == '/') {
         return 3;
+    }
+    if (ch == ' ') {
+        return 4;
     } else {
     return -1;
     }
