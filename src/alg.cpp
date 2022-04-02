@@ -46,7 +46,7 @@ for (int i = 0; i < inf.size(); i++) {
             }
             stack1.pop();
         } else {
-            while (!stack1.isEmpty() && prior(inf[i]) <= prior(stack1.get())) {
+            while ((!stack1.isEmpty()) && (prior(inf[i]) <= prior(stack1.get()))) {
                 post.push_back(stack1.get());
                 post.push_back(' ');
                 stack1.pop();
