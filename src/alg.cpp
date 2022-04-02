@@ -80,7 +80,7 @@ int calcul(char ch, int a, int b) {
     if ('/' == ch && b != 0) {
         return a / b;
     } else {
-    return -1;
+    return 0;
     }
 }
 
