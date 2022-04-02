@@ -60,6 +60,8 @@ while (!stack1.isEmpty()) {
     post.push_back(' ');
     stack1.pop();
 }
+post.erase(post.end() - 1, post.end());
+  return post;
 }
 
 int calcul(char ch, int a, int b) {
