@@ -27,7 +27,6 @@ int prior(char ch) {
 }
 
 std::string infx2pstfx(std::string inf) {
-  // добавьте код
 std::string post;
 TStack <char, 100> stack1;
 for (int i = 0; i < inf.size(); i++) {
@@ -38,7 +37,7 @@ for (int i = 0; i < inf.size(); i++) {
             stack1.push(inf[i]);
         } else if (prior(inf[i]) > prior(stack1.get())) {
             stack1.push(inf[i]);
-    }else if (prior(inf[i]) == 1) {
+    } else if (prior(inf[i]) == 1) {
             while (prior(stack1.get()) != 0) {
                 post.push_back(stack1.get());
                 post.push_back(' ');
