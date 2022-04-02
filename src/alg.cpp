@@ -27,8 +27,8 @@ int prior(char ch) {
 }
 
 std::string infx2pstfx(std::string inf) {
-std::string post;
-TStack <char, 100> stack1;
+    std::string post;
+    TStack <char, 100> stack1;
 for (int i = 0; i < inf.size(); i++) {
     if (prior(inf[i]) == -1) {
         post.push_back(inf[i]);
