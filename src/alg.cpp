@@ -84,13 +84,13 @@ TStack <int, 100> stack2;
     if (prior(pref[i]) == -1) {
       stack2.push(pref[i] - '0');
     } else if (prior(pref[i]) <= 3) {
-      int a = stack2.get();
-      stack2.pop();
       int b = stack2.get();
+      stack2.pop();
+      int a = stack2.get();
       stack2.pop();
       stack2.push(calcul(pref[i], a, b));
     }
   }
- int znachenie = stack2.get();
+  int znachenie = stack2.get();
   return znachenie;
 }
